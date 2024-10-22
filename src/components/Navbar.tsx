@@ -29,7 +29,7 @@ export const Navbar = () => {
                         </a>
 
                         <a href="https://wa.link/t8bau8" target="_blank" rel="noopener noreferrer">
-                            <button className='bg-white py-2 px-4 rounded-lg'>
+                            <button className='border-2 border-box bg-white py-2 px-4 rounded-lg hover:border-2 hover:border-white hover:bg-black hover:border-black hover:text-white transition'>
                                 Let&#39;s Talk
                             </button>
                         </a>

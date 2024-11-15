@@ -8,7 +8,7 @@ import { PinContainer } from "./Pin";
 const RecentProjects = () => {
   return (
     <div className="py-20">
-      <h1 className="text-xl text-center text-white/70">
+      <h1 className="text-center text-[25px] sm:text-[25px] md:text-center leading-tight font-bold">
         A small selection of my{" "}
         <span className="block sm:block lg:inline text-[#9560EB]">Recent Projects</span>
       </h1>

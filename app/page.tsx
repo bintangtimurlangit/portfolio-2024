@@ -8,6 +8,7 @@ import { Hero } from "@/components/Hero"
 import { LogoTicker } from "@/components/LogoTicker"
 import RecentProjects from "@/components/RecentProjects"
 import { Volunteer } from "@/components/Volunteer"
+import PricingSection from "@/components/Pricing"
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +33,9 @@ export default function Home() {
       </div>
       <div className="w-full items-center" id="volunteer">
         <Volunteer />
+      </div>
+      <div className="w-full items-center" id="pricing">
+        <PricingSection />
       </div>
     </main>
   );

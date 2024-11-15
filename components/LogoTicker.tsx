@@ -24,9 +24,9 @@ export const LogoTicker = () => {
     return (
         <div className="bg-[#010117] text-white py-[72px] sm:py-24">
             <div className="container">
-                <h2 className='text-xl text-center text-white/70'>
+                <h1 className="text-center text-[25px] sm:text-[25px] md:text-center leading-tight font-bold">
                     Companies I’ve collaborated with
-                </h2>
+                </h1>
                 <div className="flex overflow-hidden mt-9 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative after:right-0 before:left-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#010117,rgb(0,0,0,0))] after:bg-[linear-gradient(to_left,#010117,rgb(0,0,0,0))]">
                     <motion.div
                         transition={{

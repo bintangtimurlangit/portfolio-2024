@@ -10,157 +10,146 @@ enum PRICING_PLAN {
   ENTERPRISE = "Enterprise Plan",
 }
 
-enum DURATION {
-  MONTHLY = "MONTHLY",
-  YEARLY = "YEARLY",
-}
-
 const PricingSection = () => {
   const PRICING_CARDS = [
     {
       planType: PRICING_PLAN.BASIC,
       typeName: "Basic",
       duration: "",
-      price: "0",
-      description: "Limited block trials for teams",
-      highlightFeature: "",
+      price: "1.000.000",
+      description: "Perfect for simple personal websites",
+      highlightFeature: "Essential Features",
       features: [
-        "Unlimited blocks for teams",
-        "Limited file uploads",
-        "30 day page history",
+        "Single Page Website",
+        "Mobile Responsive Design",
+        "Contact Form",
+        "3 Content Sections",
+        "Basic SEO Setup",
+        "1 Round of Revisions",
       ],
     },
     {
       planType: PRICING_PLAN.PREMIUM,
-      duration: DURATION.MONTHLY,
       typeName: "Premium",
-      price: "29.99",
-      description: "Billed annually. $14.5 billed monthly",
-      highlightFeature: "Everything in free +",
+      price: "2.000.000",
+      description: "Ideal for small businesses",
+      highlightFeature: "Everything in Basic +",
       features: [
-        "Unlimited blocks for teams",
-        "Unlimited file uploads",
-        "30 days page history",
+        "Up to 5 Pages",
+        "Custom Design",
+        "Social Media Integration",
+        "Google Analytics Setup",
+        "Basic CMS Integration",
+        "3 Rounds of Revisions",
+        "1 Month Support",
       ],
     },
     {
       planType: PRICING_PLAN.ENTERPRISE,
-      duration: DURATION.YEARLY,
+      duration: "",
       typeName: "Enterprise",
-      price: "299.9",
-      description: "Billed annually.",
-      highlightFeature: "Everything in free +",
+      price: "Custom",
+      description: "Tailored solutions for your business needs",
+      highlightFeature: "Everything in Premium +",
       features: [
-        "Unlimited blocks for teams",
-        "Unlimited file uploads",
-        "100 days page history",
+        "Up to 10 Pages",
+        "Advanced CMS Integration",
+        "E-commerce Features",
+        "Custom Animations",
+        "Performance Optimization",
+        "Advanced SEO Setup",
+        "3 Months Support",
+        "Custom Features Available",
       ],
     },
   ];
 
   return (
-    <section
-      className="w-full px-4
-    sm:px-6 mt-[200px] flex justify-center items-center flex-col relative"
-    >
-      <div className="flex justify-center items-center max-w-[60%] lg:max-w-[100%]">
-        <h1 className="text-center text-[25px] sm:text-[25px] md:text-center leading-tight font-bold">
-          Web Development Pricing
-        </h1>
-      </div>
-
-      <div
-        className="w-full max-w-xs flex flex-col-reverse lg:flex-row gap-4 justify-center
-       sm:items-stretch mt-14 mx-auto
-      "
-      >
+    <div className="py-20 bg-gradient-to-b from-[#010117] via-[#1a1d3a] to-[#010117] relative">
+      <div className="absolute inset-0 bg-gradient-radial from-[#9560EB]/10 via-transparent to-transparent blur-3xl"></div>
+      <h1 className="relative text-center text-[25px] sm:text-[25px] md:text-center leading-tight font-bold">
+        Web Development{" "}
+        <span className="block sm:block lg:inline text-[#9560EB] drop-shadow-[0_0_20px_rgba(149,96,235,0.7)]">
+          Pricing
+        </span>
+      </h1>
+      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {PRICING_CARDS.map((plan) => (
-          <PricingCard
+          <div
             key={plan.planType}
-            className={clsx(
-              "border rounded-2xl background-blur-3xl relative ",
-              {
-                "border-brand-primary-purple":
-                  plan.planType === PRICING_PLAN.PREMIUM,
-                "border-[#282829]": plan.planType !== PRICING_PLAN.PREMIUM,
-              }
-            )}
-            cardHeader={
-              <div className="w-full">
-                {plan.planType === PRICING_PLAN.PREMIUM && (
-                  <Fragment>
-                    <div
-                      className="w-[100%] blur-[120px]
-                        rounded-full h-56 
-                      bg-brand-primary-purple/80 -z-10 top-4 absolute"
-                    />
-
-                    <span className="absolute top-4 right-6">
-                      <GlassBox />
-                    </span>
-                  </Fragment>
-                )}
-                <h1 className="text-3xl font-semibold text-neutrals-4">
+            className="h-[45rem] flex items-center justify-center sm:w-96 w-[80vw]"
+          >
+            <div 
+              className="relative w-full h-full rounded-2xl 
+              shadow-[0_8px_16px_rgb(0_0_0/0.4)] 
+              border border-white/[0.1] 
+              hover:border-[#9560EB]/50
+              hover:shadow-[0_8px_30px_rgb(149,96,235,0.2)]
+              hover:scale-105
+              transition-all duration-500 ease-out"
+              style={{ backgroundColor: "#13162D" }}
+            >
+              <div className="flex flex-col h-full p-8 justify-between">
+                <h1 className={clsx(
+                  "text-3xl font-semibold mb-6 text-[#ffffff] drop-shadow-[0_0_35px_rgba(149,96,235,0.9)]"
+                )}>
                   {plan.typeName}
                 </h1>
-              </div>
-            }
-            cardBody={
-              <div className="p-0">
-                <div className="flex items-center">
-                  <span className="text-sm text-neutrals-6">$</span>
-                  <h5 className="text-[28px] text-neutrals-6">
-                    {plan.price}
-                    <span className="!text-[16px] text-neutrals-8">
-                      {plan.duration === DURATION.MONTHLY
-                        ? "/mo"
-                        : plan.duration === DURATION.YEARLY
-                        ? "/yr"
-                        : ""}
-                    </span>
-                  </h5>
+
+                <div className="mb-6">
+                  <div className="flex items-center gap-1">
+                    <span className="text-sm text-neutrals-6">Rp</span>
+                    <h5 className="text-[28px] text-neutrals-6">
+                      {plan.price}
+                    </h5>
+                  </div>
+                  <p className="text-washed-purple-800 mt-2">{plan.description}</p>
                 </div>
-                <p className="text-washed-purple-800">{plan.description}</p>
-                <button
-                  className="whitespace-nowrap w-full h-[42px] mt-4 p-[1px]
-                bg-gradient-to-r from-[#201F30] to-[#666666]/30 rounded-[15px]
-                "
-                >
-                  <span
-                    className="flex items-center gap-3 justify-center w-full 
-                  h-full rounded-[15px]
-                  bg-gradient-to-tr from-black to-[#46445b]/5
-                  text-[17px] font-normal text-[#8D8C95]"
+
+                <div className="flex-grow">
+                  <p className="font-normal text-[14px] text-white mb-4">
+                    {plan.highlightFeature}
+                  </p>
+                  <ul className="font-normal flex flex-col gap-4">
+                    {plan.features.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="flex items-center gap-3 text-neutrals-6 text-[15px]"
+                      >
+                        <GlassCheck />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-8">
+                  <button
+                    className="whitespace-nowrap w-full h-[42px] p-[1px]
+                    bg-gradient-to-r from-[#201F30] to-[#666666]/30 rounded-[15px]
+                    hover:from-[#9560EB] hover:to-[#201F30]
+                    transition-all duration-300 ease-in-out
+                    hover:shadow-[0_0_20px_rgba(149,96,235,0.3)]"
                   >
-                    {plan.planType === PRICING_PLAN.ENTERPRISE
-                      ? "Contact Us"
-                      : "Get Started"}
-                  </span>
-                </button>
-              </div>
-            }
-            cardFooter={
-              <>
-                <p className="font-normal text-[14px] text-white mb-4">
-                  {plan.highlightFeature}
-                </p>
-                <ul className="font-normal flex mb-2 flex-col gap-3">
-                  {plan.features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center text-neutrals-6 text-[15px]"
+                    <span
+                      className="flex items-center gap-3 justify-center w-full 
+                      h-full rounded-[15px]
+                      bg-gradient-to-tr from-black to-[#46445b]/5
+                      text-[17px] font-normal text-[#8D8C95]
+                      hover:text-white transition-colors duration-300"
                     >
-                      <GlassCheck />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            }
-          />
+                      {plan.planType === PRICING_PLAN.ENTERPRISE
+                        ? "Contact Us"
+                        : "Get Started"}
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

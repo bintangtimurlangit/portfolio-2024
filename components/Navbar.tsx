@@ -22,6 +22,9 @@ export const Navbar = () => {
                             Volunteer
                         </a>
                         <a href='#' className='text-white text-opacity-60 hover:text-opacity-100 transition'>
+                            Pricing
+                        </a>
+                        <a href='#' className='text-white text-opacity-60 hover:text-opacity-100 transition'>
                             Contact
                         </a>
                         <a href='#' className='text-green-500 font-medium'>

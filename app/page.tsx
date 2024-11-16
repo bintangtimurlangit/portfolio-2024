@@ -7,7 +7,7 @@ import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
 import { LogoTicker } from "@/components/LogoTicker"
 import RecentProjects from "@/components/RecentProjects"
-import { Volunteer } from "@/components/Volunteer"
+import VolunteerExperience from "@/components/VolunteerExperience"
 import PricingSection from "@/components/Pricing"
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
         <RecentProjects />
       </div>
       <div className="w-full items-center" id="volunteer">
-        <Volunteer />
+        <VolunteerExperience />
       </div>
       <div className="w-full items-center" id="pricing">
         <PricingSection />
